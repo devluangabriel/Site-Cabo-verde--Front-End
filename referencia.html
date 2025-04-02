@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Site animado Apresentação português.</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&display=swap"rel="stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style/referencias.css">
+
+</head>
+
+<body>      
+
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="referencia.html">Referencias</a></li>
+    </ul>
+</nav>
+
+
+
+
+  <div class="app">
+
+    <div class="cardList">
+      <button class="cardList__btn btn btn--left">
+        <div class="icon">
+          <svg>
+            <use xlink:href="#arrow-left"></use>
+          </svg>
+        </div>
+      </button>
+
+      <div class="cards__wrapper">
+        <div class="card current--card">
+          <div class="card__image">
+            <img
+              src="imagems/mais/praia.jpg"
+              alt="" />
+          </div>
+        </div>
+
+        <div class="card next--card">
+          <div class="card__image">
+            <img
+              src="imagems/mais/montanha.jpg"
+              alt="" />
+          </div>
+        </div>
+
+        <div class="card previous--card">
+          <div class="card__image">
+            <img
+              src="imagems/mais/casas.jpg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+
+      <button class="cardList__btn btn btn--right">
+        <div class="icon">
+          <svg>
+            <use xlink:href="#arrow-right"></use>
+          </svg>
+        </div>
+      </button>
+    </div>
+
+    <div class="infoList">
+      <div class="info__wrapper">
+        <div class="info current--info">
+          <h1 class="text name"> Praia de <br> Santa Maria </h1>
+          <h4 class="text location">Cabo Verde, Sal</h4>
+          <p class="text description">Paraíso tropical com águas cristalinas<br> e areias douradas.<br> Um dos cartões-postais de Cabo Verde.</p>
+        </div>
+
+        <div class="info next--info">
+          <h1 class="text name"><br>Pico do <br>Fogo</h1>
+          <h4 class="text location">Cabo verde, Ilha do Fogo</h4>
+          <p class="text description">O ponto mais alto de Cabo Verde, com 2.829 metros.<br> Um vulcão ativo que domina a paisagem da ilha do Fogo,<br> oferecendo trilhas desafiadoras e vistas espetaculares.</p>
+        </div>
+
+        <div class="info previous--info">
+          <h1 class="text name">Casas de <br>Cabo Verde</h1>
+          <h4 class="text location">Cabo verde, Cidade Velha</h4>
+          <p class="text description">As casas coloridas da Cidade Velha, em Santiago,<br> são Patrimônio Mundial da UNESCO.<br> Um marco histórico do primeiro assentamento europeu nos trópicos.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="app__bg">
+      <div class="app__bg__image current--image">
+        <img
+          src="praia.jpg"
+          alt="" />
+      </div>
+      <div class="app__bg__image next--image">
+        <img
+          src="montanha.jpg"
+          alt="" />
+      </div>
+      <div class="app__bg__image previous--image">
+        <img
+          src="casas.jpg"
+          alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="loading__wrapper">
+    <div class="loader--text">Loading...</div>
+    <div class="loader">
+      <span></span>
+    </div>
+  </div>
+
+
+  <svg class="icons" style="display: none;">
+    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+      <polyline points='328 112 184 256 328 400'
+        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+      <polyline points='184 112 328 256 184 400'
+        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+  </svg>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- partial -->
+  <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+  <script src="script/referencia.js"></script>
+
+</body>
+
+</html>
