@@ -1,4 +1,6 @@
-const moonIcon = document.querySelector(".toggle-dark-mode i"); // Ícone da lua
+console.clear();
+
+const moonIcon = document.querySelector("#temaicone"); // Ícone da lua
 const header = document.querySelector("header"); // O header
 const body = document.body; // Para verificar o modo escuro
 
@@ -16,11 +18,11 @@ document.addEventListener("mousemove", (e) => {
             moonRect.left < headerRect.right;
 
         if (isOverHeader) {
-            header.style.backgroundColor = "#ddd"; // Cor mais clara no modo claro
+            moonIcon.style.color = isOverHeader ? "#bbb" : ""; 
         } else {
-            header.style.backgroundColor = ""; // Volta ao normal
+            moonIcon.style.color = ""; // Mantém a cor normal no modo escuro
         }
     } else {
-        header.style.backgroundColor = ""; // Mantém o normal no modo escuro
+        moonIcon.style.color = ""; // Mantém a cor normal no modo escuro
     }
 });
