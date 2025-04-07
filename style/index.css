@@ -953,6 +953,79 @@ body.dark .curiosidades li {
     background: #333;
 }
 
+#cookie-popup {
+    display: none; /* Esconde o popup até o JS exibir */
+  }
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+  }
+  
+  
+  
+  
+  .popup-box, .popup-check {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .popup-box img.loader-img {
+      width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .popup-check img.check-img {
+    width: 70px;
+    margin-bottom: 15px;
+    animation: pop 0.4s ease-in-out;
+  }
+  
+  .popup-box button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #00aaff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .popup-box button:hover {
+    background-color: #007acc;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+
 
 @media (max-width: 600px) {
     nav ul li {

@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
+
+    <div id="cookie-popup" class="popup-overlay">
+        <div class="popup-box">
+          <img src="https://i.gifer.com/ZKZg.gif" alt="Carregando..." class="loader-img">
+          <h2>👋 Olá, visitante!</h2>
+          <p>
+            Seja muito bem-vindo ao nosso site sobre <strong>Cabo Verde</strong>! Este projeto foi criado com muito carinho como parte da disciplina de <strong>Português Instrumental</strong> do curso de <strong>Sistemas de Informação</strong>.
+          </p>
+          <p>
+            Ao continuar, você aceita o uso de cookies para uma experiência melhor. 🌍✨
+          </p>
+          <button id="accept-btn">OK</button>
+        </div>
+      
+        <div class="popup-check hidden">
+          <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Verificado" class="check-img">
+          <h2>✅ Tudo certo!</h2>
+          <p>
+            Obrigado por aceitar os cookies. Agora sim, você pode explorar todo o conteúdo do nosso site! Esperamos que aproveite a leitura e conheça ainda mais sobre Cabo Verde. 🇨🇻💻
+          </p>
+          <p>
+            Ah! E não esquece de compartilhar com os colegas. 😉
+          </p>
+        </div>
+      </div>
+
     <header>
         <h1>Bem-vindo a Cabo Verde</h1>
         <button id="mudartema">
@@ -556,8 +582,10 @@
     <footer>
         <p>Projeto realizado para a atividade sobre Cabo Verde, da matéria de Português Instrumental, do Curso de Sistema de Informação.</p>
     </footer>
+    <script src="script/cookie.js"></script>
     <script src="script/index.js"></script>
     <script src="script/active.js"></script>
     <script src="script/mouseactive.js"></script>
+
 </body>
 </html>
