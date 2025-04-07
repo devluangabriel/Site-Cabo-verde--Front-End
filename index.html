@@ -6,6 +6,7 @@
     <title>Português Instrumental - Cabo Verde</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/quiz.css">
 </head>
 <body>
 
@@ -574,9 +575,52 @@
             <iframe src="https://www.youtube.com/embed/h-4gShB38xc" frameborder="0" allowfullscreen></iframe>
         </div>
         <p class="video-description">Descubra a beleza de Cabo Verde neste vídeo especial que mostra suas paisagens incríveis e cultura fascinante.</p>
+        <div class="quiz-button-container">
+            <button id="open-quiz" class="open-quiz">🎯 Realizar Quiz</button>
+          </div>
+          
     </section>
     
-    
+     <!-- POPUP DO QUIZ -->
+  <div id="quiz-popup" class="quiz-overlay hidden">
+    <div class="quiz-box">
+
+      <!-- Título -->
+      <h2>Quiz sobre Cabo Verde</h2>
+
+      <!-- Pergunta -->
+      <div id="quiz-question"></div>
+
+      <!-- Opções -->
+      <div id="quiz-options"></div>
+
+      <!-- Próxima Pergunta -->
+      <button id="next-question" class="hidden">Próxima</button>
+
+      <!-- Resultado -->
+      <div id="quiz-result" class="hidden"></div>
+
+      <!-- Envio por E-mail -->
+      <div id="quiz-buttons" class="hidden">
+        <label for="user-email">📧 Insira seu e-mail:</label>
+        <input type="email" id="user-email" placeholder="exemplo@email.com">
+        
+        <div class="button-group">
+          <button id="send-quiz-email">Enviar respostas por e-mail</button>
+          <button id="close-quiz">Fechar Quiz</button> <!-- Fechar aparece aqui -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Script EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("ZmSejUulDWqunCmCc");
+    })();
+  </script>
     
     
     <footer>
@@ -587,6 +631,7 @@
     <script src="script/active.js"></script>
     <script src="script/mouseactive.js"></script>
     <script src="script/protection.js"></script>
+    <script src="script/quiz.js"></script>
 
 </body>
 </html>

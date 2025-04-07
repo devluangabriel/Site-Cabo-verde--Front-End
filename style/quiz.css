@@ -1,0 +1,219 @@
+
+/* Overlay escura e centralização do popup */
+.quiz-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: sans-serif;
+}
+
+/* Caixa principal do quiz */
+.quiz-box {
+  position: relative;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #e74c3c;
+}
+
+/* Pergunta */
+.quiz-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+/* Botões de resposta */
+#quiz-options button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#quiz-options button:hover {
+  background: #005fa3;
+}
+
+/* Estilo aplicado após resposta */
+#quiz-options button.correct {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+#quiz-options button.wrong {
+  background-color: #dc3545 !important;
+  color: white;
+}
+
+/* Ícones de acerto e erro (caso use) */
+.correct-icon, .wrong-icon {
+  font-size: 40px;
+  margin-top: 10px;
+  animation: pop 0.5s ease;
+  display: block;
+}
+
+.correct-icon { color: green; }
+.wrong-icon { color: red; }
+
+/* Animação dos ícones */
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Botão de próxima pergunta */
+#next-question {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+#next-question:hover {
+  background: #0056b3;
+}
+
+/* Resultado final */
+#quiz-result {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Container dos botões finais */
+#quiz-buttons {
+  margin-top: 20px;
+}
+
+#quiz-buttons label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Campo de e-mail */
+#user-email {
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+/* Botões de envio e fechar */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botão enviar */
+#send-quiz-email {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#send-quiz-email:hover {
+  background-color: #2878b6;
+}
+
+/* Botão fechar quiz */
+#close-quiz {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+#close-quiz:hover {
+  background-color: #c0392b;
+}
+
+/* Classe para esconder elementos */
+.hidden {
+  display: none;
+}
+
+#quiz-question {
+  color: black;
+}
+
+#quiz-buttons label {
+  color: black ;
+}
+
+
+/* Se tiver tema escuro via classe no <body> */
+body.dark #quiz-buttons label {
+  color: black ;
+}
+
+/* Animação de entrada do popup */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade extra */
+@media screen and (max-width: 400px) {
+  .quiz-box {
+    padding: 30px 20px;
+  }
+
+  #quiz-options button, #next-question, #send-quiz-email, #close-quiz {
+    font-size: 0.9em;
+  }
+}
