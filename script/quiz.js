@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const questions = [
-    { question: "Qual é a capital de Cabo Verde?", options: ["Praia", "Mindelo", "Sal Rei", "Assomada"], answer: "Praia" },
-    { question: "Qual é a língua oficial de Cabo Verde?", options: ["Francês", "Inglês", "Português", "Espanhol"], answer: "Português" },
-    { question: "Cabo Verde é composto por quantas ilhas?", options: ["5", "7", "10", "12"], answer: "10" },
-    { question: "Qual o principal setor da economia cabo-verdiana?", options: ["Agricultura", "Turismo", "Indústria", "Mineração"], answer: "Turismo" },
-    { question: "Cabo Verde foi colonizado por qual país?", options: ["França", "Espanha", "Portugal", "Itália"], answer: "Portugal" },
-    { question: "Qual destas ilhas é a mais populosa?", options: ["Santo Antão", "Fogo", "Sal", "Santiago"], answer: "Santiago" },
-    { question: "A moeda de Cabo Verde é o:", options: ["Dólar cabo-verdiano", "Real", "Escudo cabo-verdiano", "Euro"], answer: "Escudo cabo-verdiano" },
-    { question: "Quando Cabo Verde conquistou sua independência?", options: ["1975", "1980", "1960", "1990"], answer: "1975" },
-    { question: "Qual é o estilo musical tradicional de Cabo Verde?", options: ["Samba", "Morna", "Fado", "Tango"], answer: "Morna" },
-    { question: "Qual o nome da famosa cantora cabo-verdiana?", options: ["Ivete Sangalo", "Cesária Évora", "Anitta", "Sara Tavares"], answer: "Cesária Évora" }
+    { question: "🌍 Qual é a capital de Cabo Verde?", options: ["Praia", "Mindelo", "Sal Rei", "Assomada"], answer: "Praia" },
+    { question: "🗣️ Qual é a língua oficial de Cabo Verde?", options: ["Francês", "Inglês", "Português", "Espanhol"], answer: "Português" },
+    { question: "🏝️ Cabo Verde é composto por quantas ilhas?", options: ["5", "7", "10", "12"], answer: "10" },
+    { question: "💼 Qual o principal setor da economia cabo-verdiana?", options: ["Agricultura", "Turismo", "Indústria", "Mineração"], answer: "Turismo" },
+    { question: "🎶 Qual é o estilo musical tradicional de Cabo Verde?", options: ["Samba", "Morna", "Fado", "Tango"], answer: "Morna" },
+    { question: "🎤 Qual o nome da famosa cantora cabo-verdiana?", options: ["Ivete Sangalo", "Cesária Évora", "Anitta", "Sara Tavares"], answer: "Cesária Évora" },
+    { question: "📅 Quando Cabo Verde conquistou sua independência?", options: ["1975", "1980", "1960", "1990"], answer: "1975" }
   ];
 
   let currentQuestionIndex = 0;
